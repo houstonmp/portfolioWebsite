@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://matthewhouston.dev/ -->
+<html>
+
+<head>
+	<meta charset="windows-1252">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+	<style type="text/css">
+		html {
+			height: 100%;
+			font-family: 'Raleway', sans-serif;
+		}
+
+		* {
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		/* ===== Scrollbar CSS ===== */
+		/* Firefox */
+		* {
+			scrollbar-width: auto;
+			scrollbar-color: #ffffff #ffffff;
+		}
+
+		/* Chrome, Edge, and Safari */
+		*::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		*::-webkit-scrollbar-track {
+			background: rgba(255, 255, 255, 0);
+		}
+
+		*::-webkit-scrollbar-thumb {
+			background-color: #ffffff;
+			border-radius: 10px;
+			border: 3px solid #ffffff;
+		}
+
+		body {
+			text-align: center;
+			color: white;
+			width: 100%;
+			height: 100%;
+			display: table;
+			margin: 0;
+			padding: 0;
+			background-image: linear-gradient(to bottom right, white, #4287f5, black);
+			opacity: 0;
+			transition: opacity 4s;
+			overflow: hidden;
+		}
+
+		#overlay {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow-y: scroll;
+
+		}
+
+		header {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+		}
+
+		#container {
+			margin: 50px auto;
+			padding: 0 15%;
+			width: 100%;
+			height: 700px;
+			/* overflow-y: scroll; */
+		}
+
+		article {
+			overflow: auto;
+		}
+
+		article * {
+			float: left;
+		}
+
+		article aside {
+			width: 60%;
+		}
+
+		aside * {
+			width: 100%;
+			text-align: left;
+			padding: 10px;
+			line-height: 1.5rem;
+		}
+
+		#portfolio img {
+			/* width: 100%;  Great for Smaller Screens!!*/
+			width: 60%;
+			margin: 15px 0;
+			border-radius: 3%;
+			padding: 0;
+			border: 3px solid #ffffff
+		}
+
+		#portfolio p {
+			width: 40%;
+			margin: 0 0;
+			padding: 15px;
+			text-align: left;
+		}
+
+		.port-section {
+			margin: 20px auto;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 3px;
+		}
+
+		.port-section h3 {
+			border: none;
+			width: 100%;
+			padding: 10px;
+		}
+		
+		.social-link{
+		    transition: 1.25s;
+		}
+		.social-link:hover{
+		    transform: scale(.85);
+		    
+		}
+
+		article img {
+			width: 30%;
+			margin: 0 5%;
+			border-radius: 50%;
+		}
+
+		#banner {
+			display: block;
+			width: 70%;
+			margin: 200px auto 10px;
+			padding: 30px 30px 20px;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 3px;
+		}
+
+		h1 {
+			font-size: 50px;
+			/* border: 5px solid white; */
+			border: 5px solid rgba(255, 255, 255, 0.4);
+			/* border-bottom: 4px solid rgba(255,255,255, 0.4); */
+			margin: 0;
+			letter-spacing: inherit;
+			padding: 30px 0;
+			/* border-radius: 5px 5px 0 0; */
+		}
+
+		h3 {
+			font-style: italic;
+			font-size: 25px;
+			/* border-bottom: 5px solid white; */
+			margin: 0;
+			letter-spacing: inherit;
+			border-bottom: 5px solid rgba(255, 255, 255, 0.4);
+			border-radius: 5px;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: auto;
+			padding: 0;
+		}
+
+		.nav-link {
+			display: inline-block;
+			margin: 0 15px;
+			font-size: 1.5rem;
+			font-weight: 300;
+			transition: transform .75s, box-shadow .75s;
+			/*text-shadow: rgba(35, 35, 79, 0.505) 0 .5em .5em;*/
+		}
+
+		.nav-link:hover {
+			transform: translateY(-.15em);
+			/*text-shadow: rgb(50 198 223 / 60%) 0 0.3em 0.03em;*/
+			text-shadow: rgba(35, 35, 79, 0.505) 0 .5em .5em;
+		}
+
+		a img {
+			margin: 10px 5px 5px 5px;
+			/* float:right; */
+			width: 33px;
+		}
+
+		.fade {
+			opacity: 1;
+		}
+
+		.row {
+			width: 100%;
+			padding: 0;
+
+		}
+
+		.row img {
+			width: 30%;
+			border-radius: 0%;
+			margin: 1.66%;
+		}
+
+		aside .ed-info * {
+			margin: 0 10%;
+			width: 90%;
+			padding: 0;
+			line-height: 1rem;
+		}
+
+		#about {
+			margin-top: 10%;
+		}
+
+		.ed-info span {
+			font-size: 10px;
+			margin: 10px 50%;
+		}
+
+		.material-symbols-outlined {
+			font-variation-settings:
+				'FILL' 1,
+				'wght' 300,
+				'GRAD' 0,
+				'opsz' 20;
+
+			margin: 20% 50% 10%;
+			font-size: 3em;
+			overflow: hidden;
+		}
+
+		#education aside {
+			width: 100%;
+		}
+
+		div .ed-logos {
+			width: 20%;
+			margin: 10px 40%;
+			border-radius: 50%;
+		}
+
+		.anchor {
+			position: absolute;
+			transform: translateY(-40vh);
+		}
+	</style>
+
+	<title>Matthew Houston</title>
+	
+	<script>
+	let sections = document.querySelector('');
+	window.onscroll = function (){fade()};
+	
+	function fade(){
+	    
+	
+	}
+	</script>
+</head>
+
+<body>
+	<div id="overlay">
+		<header>
+			<span id="banner">
+				<h1>MATTHEW HOUSTON</h1>
+				<h3>Front End Web Developer</h3>
+				<section>
+					<a  href="https://www.github.com"><img class="social-link" src="img/GitHub-Mark-Light-64px.png" alt=""></a>
+					<a  href="https://www.linkedin.com/in/matthew-houston-b449b297"><img class="social-link" src="img/linked-in.png"
+							alt=""></a>
+				</section>
+			</span>
+			<nav>
+				<ul>
+					<li class="nav-link">
+						<a href="#ab-anchor">About Me </a>
+					</li>
+					<span>&#183;</span>
+					<li class="nav-link">
+						<a href="#port-anchor">Portfolio</a>
+					</li>
+					<span>&#183;</span>
+					<li class="nav-link">
+						<a href="#ex-anchor">Experience</a>
+					</li>
+					<span>&#183;</span>
+					<li class="nav-link">
+						<a href="#ed-anchor">Education</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="container">
+			<span class="material-symbols-outlined">
+				keyboard_double_arrow_down
+			</span>
+
+			<article id="about">
+				<span id="ab-anchor" class="anchor"></span>
+				<aside>
+					<h3>About Me</h3>
+					<p>Hi! My name is Matthew Houston and I'm an aspiring Jr. Web Developer within the Dallas-Fort Worth
+						Area. I value 
+					</p>
+				</aside>
+				<img src="img/portfolio-picture.jpg" alt="This is me!">
+
+			</article>
+
+			<span class="material-symbols-outlined">
+				keyboard_double_arrow_down
+			</span>
+			<article id="portfolio">
+				<span id="port-anchor" class="anchor"></span>
+				<aside>
+					<h3>Portfolio</h3>
+				</aside>
+				<section class="port-section">
+				    <h3>Yeti Website</h3>
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+					<p>During my time as the Yamanashi English Teachers International webmaster, I completely revamped
+						and redesigned the YETI website (www.yetijapan.com). I used key concepts from my user experience
+						/ user interface design classes to make the site look clean and concise. I used responsive
+						webdesign to make sure that content was displayed properly across all device resolutions. I also
+						took charge of moving our domain and website registration to a new server that better suited our
+						organization's needs.
+					</p>
+				</section>
+				<section class="port-section">
+					<h3>Yeti Website</h3>
+					<p>During my time as the Yamanashi English Teachers International webmaster, I completely revamped
+						and redesigned the YETI website (www.yetijapan.com). I used key concepts from my user experience
+						/ user interface design classes to make the site look clean and concise. I used responsive
+						webdesign to make sure that content was displayed properly across all device resolutions. I also
+						took charge of moving our domain and website registration to a new server that better suited our
+						organization's needs.
+					</p>
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+
+				</section>
+				<section class="port-section">
+				    <h3>Yeti Website</h3>
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+					<p>During my time as the Yamanashi English Teachers International webmaster, I completely revamped
+						and redesigned the YETI website (www.yetijapan.com). I used key concepts from my user experience
+						/ user interface design classes to make the site look clean and concise. I used responsive
+						webdesign to make sure that content was displayed properly across all device resolutions. I also
+						took charge of moving our domain and website registration to a new server that better suited our
+						organization's needs.
+					</p>
+				</section>
+
+				<!-- <div class="row">
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+				</div>
+				<div class="row">
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+					<img src="img/Yeti-Website.png" alt="YETI Japan Website">
+				</div> -->
+			</article>
+
+			<span class="material-symbols-outlined">
+				keyboard_double_arrow_down
+			</span>
+
+			<article id="experience">
+				<span id="ex-anchor" class="anchor"></span>
+				<aside>
+					<h3>Experience</h3>
+					<div class="ed-info">
+						<!-- <img class="ed-logos" src="img/unt.jpg" alt=""> -->
+						<h3>Hokuto City Board of Education</h3>
+						<p>Assistant Language Teacher</p>
+						<p>Yamanashi, Japan</p>
+						<p>2018 - Present</p>
+					</div>
+
+					<div class="ed-info">
+						<!-- <img class="ed-logos" src="img/jlpt.png"> -->
+						<h3>Activ8 Recruitment & Solutions</h3>
+						<p>Recruiting Assistant</p>
+						<p>Aug 2017 - Jun 2018</p>
+						<p>Dallas, Texas</p>
+
+					</div>
+				</aside>
+
+				<span class="material-symbols-outlined">
+					keyboard_double_arrow_down
+				</span>
+
+				<article id="education">
+					<span id="ed-anchor" class="anchor"></span>
+					<aside>
+						<h3>Education</h3>
+						<div class="ed-info">
+							<img class="ed-logos" src="img/unt.jpg" alt="">
+							<h3>University of North Texas</h3>
+							<ul>
+								<li>B.S. Linguistics</li>
+								<li>Computer Science Minor</li>
+								<li>Japanese Minor</li>
+							</ul>
+						</div>
+
+						<div class="ed-info">
+							<img class="ed-logos" src="img/jlpt.png">
+							<h3>Japanese Language Proficiency Exam</h3>
+							<p>N2 Level</p>
+						</div>
+					</aside>
+				</article>
+
+
+
+
+				<!-- 
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quisquam quos incidunt commodi, qui sed
+				consequatur alias ullam, officiis sequi natus temporibus architecto perferendis veniam iusto porro
+				beatae, ipsum iste?
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum, illo maxime non accusamus, dolore
+				veniam aspernatur sed eum cumque, fugit dicta ab dolores! Nemo sapiente alias rem voluptates facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam error adipisci quod quibusdam rem sunt
+				voluptate aut sapiente qui praesentium optio, amet dignissimos iusto, beatae deserunt tenetur vel quo
+				officiis?
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dicta quia rem fugit blanditiis, suscipit
+				iure, quidem repudiandae mollitia corrupti quis natus quam quo non eveniet animi quaerat nesciunt
+				tempore?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia, dolorem dolores excepturi
+				veniam quos optio blanditiis amet perspiciatis quo, accusamus tempore officiis ratione quam! Asperiores
+				officiis doloremque cum voluptatum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique aut quod rerum quis velit
+				laborum labore ea, commodi perferendis accusamus animi mollitia eaque optio soluta qui itaque placeat.
+				Non.
+			</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quisquam quos incidunt commodi, qui sed
+				consequatur alias ullam, officiis sequi natus temporibus architecto perferendis veniam iusto porro
+				beatae, ipsum iste?
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum, illo maxime non accusamus, dolore
+				veniam aspernatur sed eum cumque, fugit dicta ab dolores! Nemo sapiente alias rem voluptates facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam error adipisci quod quibusdam rem sunt
+				voluptate aut sapiente qui praesentium optio, amet dignissimos iusto, beatae deserunt tenetur vel quo
+				officiis?
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dicta quia rem fugit blanditiis, suscipit
+				iure, quidem repudiandae mollitia corrupti quis natus quam quo non eveniet animi quaerat nesciunt
+				tempore?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia, dolorem dolores excepturi
+				veniam quos optio blanditiis amet perspiciatis quo, accusamus tempore officiis ratione quam! Asperiores
+				officiis doloremque cum voluptatum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique aut quod rerum quis velit
+				laborum labore ea, commodi perferendis accusamus animi mollitia eaque optio soluta qui itaque placeat.
+				Non.
+			</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quisquam quos incidunt commodi, qui sed
+				consequatur alias ullam, officiis sequi natus temporibus architecto perferendis veniam iusto porro
+				beatae, ipsum iste?
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum, illo maxime non accusamus, dolore
+				veniam aspernatur sed eum cumque, fugit dicta ab dolores! Nemo sapiente alias rem voluptates facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam error adipisci quod quibusdam rem sunt
+				voluptate aut sapiente qui praesentium optio, amet dignissimos iusto, beatae deserunt tenetur vel quo
+				officiis?
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dicta quia rem fugit blanditiis, suscipit
+				iure, quidem repudiandae mollitia corrupti quis natus quam quo non eveniet animi quaerat nesciunt
+				tempore?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia, dolorem dolores excepturi
+				veniam quos optio blanditiis amet perspiciatis quo, accusamus tempore officiis ratione quam! Asperiores
+				officiis doloremque cum voluptatum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique aut quod rerum quis velit
+				laborum labore ea, commodi perferendis accusamus animi mollitia eaque optio soluta qui itaque placeat.
+				Non.
+			</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quisquam quos incidunt commodi, qui sed
+				consequatur alias ullam, officiis sequi natus temporibus architecto perferendis veniam iusto porro
+				beatae, ipsum iste?
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum, illo maxime non accusamus, dolore
+				veniam aspernatur sed eum cumque, fugit dicta ab dolores! Nemo sapiente alias rem voluptates facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam error adipisci quod quibusdam rem sunt
+				voluptate aut sapiente qui praesentium optio, amet dignissimos iusto, beatae deserunt tenetur vel quo
+				officiis?
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dicta quia rem fugit blanditiis, suscipit
+				iure, quidem repudiandae mollitia corrupti quis natus quam quo non eveniet animi quaerat nesciunt
+				tempore?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia, dolorem dolores excepturi
+				veniam quos optio blanditiis amet perspiciatis quo, accusamus tempore officiis ratione quam! Asperiores
+				officiis doloremque cum voluptatum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique aut quod rerum quis velit
+				laborum labore ea, commodi perferendis accusamus animi mollitia eaque optio soluta qui itaque placeat.
+				Non.
+			</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quisquam quos incidunt commodi, qui sed
+				consequatur alias ullam, officiis sequi natus temporibus architecto perferendis veniam iusto porro
+				beatae, ipsum iste?
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum, illo maxime non accusamus, dolore
+				veniam aspernatur sed eum cumque, fugit dicta ab dolores! Nemo sapiente alias rem voluptates facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam error adipisci quod quibusdam rem sunt
+				voluptate aut sapiente qui praesentium optio, amet dignissimos iusto, beatae deserunt tenetur vel quo
+				officiis?
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dicta quia rem fugit blanditiis, suscipit
+				iure, quidem repudiandae mollitia corrupti quis natus quam quo non eveniet animi quaerat nesciunt
+				tempore?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia, dolorem dolores excepturi
+				veniam quos optio blanditiis amet perspiciatis quo, accusamus tempore officiis ratione quam! Asperiores
+				officiis doloremque cum voluptatum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique aut quod rerum quis velit
+				laborum labore ea, commodi perferendis accusamus animi mollitia eaque optio soluta qui itaque placeat.
+				Non.
+			</p>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quisquam quos incidunt commodi, qui sed
+				consequatur alias ullam, officiis sequi natus temporibus architecto perferendis veniam iusto porro
+				beatae, ipsum iste?
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum, illo maxime non accusamus, dolore
+				veniam aspernatur sed eum cumque, fugit dicta ab dolores! Nemo sapiente alias rem voluptates facilis.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam error adipisci quod quibusdam rem sunt
+				voluptate aut sapiente qui praesentium optio, amet dignissimos iusto, beatae deserunt tenetur vel quo
+				officiis?
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dicta quia rem fugit blanditiis, suscipit
+				iure, quidem repudiandae mollitia corrupti quis natus quam quo non eveniet animi quaerat nesciunt
+				tempore?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia, dolorem dolores excepturi
+				veniam quos optio blanditiis amet perspiciatis quo, accusamus tempore officiis ratione quam! Asperiores
+				officiis doloremque cum voluptatum!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem similique aut quod rerum quis velit
+				laborum labore ea, commodi perferendis accusamus animi mollitia eaque optio soluta qui itaque placeat.
+				Non.
+			</p> -->
+		</section>
+
+		<!-- Test for Scrolling -->
+
+
+
+		<script>
+
+			setTimeout(function () {
+				document.body.className += " fade";
+			}, 1);
+
+		</script>
+
+</body>
+
+</html>

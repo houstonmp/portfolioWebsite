@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://matthewhouston.dev/ -->
+<html>
+<head><meta charset="windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/sandbox/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/sandbox/img/favicon-16x16.png">
+<link rel="manifest" href="/sandbox/img/site.webmanifest">
+<link rel="mask-icon" href="/sandbox/img/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/sandbox/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/sandbox/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">
+html{
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+body{
+	background-image: linear-gradient(to bottom right, white, #4287f5, black);
+	text-align: center;
+	color: white;
+	width: 100%;
+	height: 100%;
+	display: table;
+	margin: 0;
+	padding: 0;
+	
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #c9c9c9 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 30px;
+    border: solid white 2px;
+  }
+
+
+h1{
+	font-size: 50px;
+	/* border: 5px solid white; */
+	border: 5px solid rgba(255,255,255, 0.4);
+	/* border-bottom: 4px solid rgba(255,255,255, 0.4); */
+	margin: 0;
+		letter-spacing: inherit;
+			padding: 30px 0;
+			/* border-radius: 5px 5px 0 0; */
+}
+
+h3{
+	font-style: italic;
+	font-size: 25px;
+	/* border-bottom: 5px solid white; */
+	border-bottom: 5px solid rgba(255,255,255, 0.4);
+	margin: 0;
+			border-radius: 0 0 5px 5px;
+		letter-spacing: inherit;
+}
+div{
+	display:table-cell;
+	vertical-align: middle;
+
+}
+span{
+	display: block;
+	width: 70%;
+	margin: auto;
+	padding: 30px;
+	max-height: 630px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 3px;
+	overflow: auto;
+}
+
+iframe{
+    height: 450px;
+}
+
+img{
+	margin: 10px 5px 5px 5px;
+/* float:right; */
+	width: 33px;
+}
+
+.btn{
+    border: solid white 2px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    font-size: 	2vw;;
+    padding: 7px 17px;
+    
+}
+.btn:hover{
+     border: solid rgb(63, 81, 181) 2px;
+     color: white;
+     background-color: rgb(63, 81, 181);
+}
+.btn:active{
+    background-color: white;
+    color: rgb(63, 81, 181);
+    border: solid rgb(63, 81, 181) 2px;
+}
+
+.btn:focus{
+    box-shadow: 0 3px 7px rgb(63, 81, 181);
+}
+
+.container{
+    margin: 8px 0 8px 0;
+}
+
+</style>
+
+<script>
+function changeDisplay(x){
+    switch (x){
+     case 'input':
+         document.getElementById(x).style.display = "inline-block";
+         document.getElementById('chart').style.display = "none";
+         document.getElementById('macros').style.display = "none";
+         document.getElementById('googlesheet').style.display = "none";
+         break;
+     case 'chart':
+         document.getElementById(x).style.display = "inline-block";
+         document.getElementById('input').style.display = "none";
+         document.getElementById('macros').style.display = "none";
+         document.getElementById('googlesheet').style.display = "none";
+        break;
+     case 'macros':
+         document.getElementById(x).style.display = "inline-block";
+         document.getElementById('input').style.display = "none";
+         document.getElementById('chart').style.display = "none";
+        document.getElementById('googlesheet').style.display = "none";
+        break;
+        
+     case 'googlesheet':
+         document.getElementById(x).style.display = "inline-block";
+         document.getElementById('input').style.display = "none";
+         document.getElementById('chart').style.display = "none";
+         document.getElementById('macros').style.display = "none";
+        break;
+    
+    default:
+         document.getElementById(x).style.display = "inline-block";
+         document.getElementById('chart').style.display = "none";
+    }
+        
+}    
+</script>
+
+	<title>Matthew Houston</title>
+</head>
+<body>
+	<div>
+		<span>
+		    <button class="btn" onclick="changeDisplay('input');">Input</button>
+		    <button class="btn" onclick="changeDisplay('chart');" >Chart</button>
+                    <button class="btn" onclick="changeDisplay('macros');" >Macros</button>
+                    <button class="btn" onclick="changeDisplay('googlesheet');" >Food Log</button>
+                    
+		    <iframe id="input" class="container" src="https://docs.google.com/forms/d/e/1FAIpQLSeBk1I3qeAeFwEZ4R2_3mnySAAU-taknkMMobzIGBwdfzDXIA/viewform?embedded=true" width="100%" height="300px" frameborder="0" marginheight="0" marginwidth="0" style="float:center">Loading…</iframe> 
+		    
+		    <iframe id="chart" class="container"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9h-P8Zya0QhDuraWEPn_PBsvBxKPHmBJ8nAuGqCQBug9JNLIMbSVt3SFGCB3E3pAH5sQLALg-CHmE/pubhtml?gid=1016054780&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="300px" frameborder="0" marginheight="0" marginwidth="0" style="display:none; float:center">...Loading</iframe>
+		   
+		    
+		    <link rel="import" class="container" href="https://docs.google.com/forms/d/e/1FAIpQLSeBk1I3qeAeFwEZ4R2_3mnySAAU-taknkMMobzIGBwdfzDXIA/viewform?embedded=true">
+		    
+		    <iframe id="macros" class="container" src="https://docs.google.com/forms/d/e/1FAIpQLScuDIx74bkEfQGqy1H-XWJyZ825_HVK9hrmfnXz3OSkyVO7WA/viewform?embedded=true" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" style="display:none; float:center">Loading…</iframe>
+		    
+		    <iframe id="googlesheet" class="container" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKAgB8WnAEYxU2xz-NQaqQ0h_Et-A8C4_uW2xRuau-vzSy19ioHlCo6v5LS99_b-ztISVZMFiGn4fv/pubhtml?widget=true&amp;headers=false" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0" style="display:none; float:center"></iframe>
+
+			<a href="https://www.github.com"><img src="/img/GitHub-Mark-Light-64px.png" alt=""></a>
+			<a href="https://www.linkedin.com/in/matthew-houston-b449b297"><img src="/img/linked-in.png" alt=""></a>
+
+			
+		</span>
+	</div>
+
+</body></html>
